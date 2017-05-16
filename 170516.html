@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- <p>
+JavaScript 能够直接写入 HTML 输出流中：
+</p> -->
+<!-- 
+
+// document.write("<h1>This is a heading</h1>");
+// document.write("<p>This is a paragraph.</p>"); -->
+<script>
+function myFunction()
+{
+x=document.getElementById("demo");  // 找到元素
+x.innerHTML="Hello JavaScript!";    // 改变内容
+}
+function changeImage()
+{
+element=document.getElementById('myimage')
+if (element.src.match("on"))
+  {
+  element.src="off.jpg";
+  }
+else
+  {
+  element.src="on.jpg";
+  }
+}
+</script>
+
+
+<p id="demo">
+JavaScript 能改变 HTML 元素的内容。
+</p>
+<p>
+您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+</p>
+<button type="button" onclick="myFunction()">点击这里</button>
+<br>
+<img id="myimage" width="100px" onclick="changeImage()" src="off.jpg">
+</body>
+</html>
